@@ -6,9 +6,17 @@ span = document.querySelector('.hidden')
 item = document.querySelector('.item');
 
 
+
 form.addEventListener('submit', (e)=> {
     e.preventDefault()
-    if(input.value){
+
+    const todos = input.value 
+    // localStorage.setItem('list', JSON.stringify(todos))
+
+    if(todos){
+
+       localStorage.setItem('list', JSON.stringify(todos))
+
        const item = document.createElement('div');
        item.classList.add('item')
        
@@ -43,6 +51,7 @@ form.addEventListener('submit', (e)=> {
         }, 2500)
         
     }
+    
     
 })
 
