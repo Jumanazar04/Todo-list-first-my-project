@@ -1,0 +1,47 @@
+.form {
+    width: 500px;
+    margin: 100px auto 5px auto;
+    display: flex;
+    column-gap: 20px;
+}
+.forma {
+    margin: 0 auto 40px auto;
+    max-width: 500px;
+}
+.main-btn:hover {
+    background-color: blue;
+    color: aliceblue;
+}
+
+.result {
+    width: 500px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2px 20px;
+}
+
+.item-text {
+    font-size: 20px;
+    opacity: .9;
+    letter-spacing: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.delete-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+.edit-btn:hover{
+    background-color: green;
+    color: white;
+}
