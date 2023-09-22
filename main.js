@@ -2,8 +2,39 @@ const form = document.querySelector('.forma'),
 input = document.querySelector('.input'),
 btn = document.querySelector('.btn'),
 result = document.querySelector('.result'),
-span = document.querySelector('.hidden')
+span = document.querySelector('.hidden'),
 item = document.querySelector('.item');
+const hours = document.querySelector('.hour')
+const minutes = document.querySelector('.minute')
+const secunds = document.querySelector('.secund')
+
+const now = new Date();
+const hour = now.getHours();
+const minute = now.getMinutes();
+const second = now.getSeconds();
+console.log(hour);
+
+
+if(hour < 10){
+    hours.textContent = '0',hour;
+}else {
+    hours.textContent = hour;
+}
+if(minute < 10){
+    minutes.textContent = `0${minute}` ;
+}else {
+    minutes.textContent = minute;
+}
+if(second < 10){
+    setInterval(() =>{
+        secunds.textContent = `0${second}` ;
+    }, 1000)
+}else {
+    setInterval(() =>{
+        secunds.textContent = second;
+    }, 1000)
+    
+}
 
 
 
