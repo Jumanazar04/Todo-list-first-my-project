@@ -25,16 +25,14 @@ if(minute < 10){
 }else {
     minutes.textContent = minute;
 }
-if(second < 10){
-    setInterval(() =>{
-        secunds.textContent = `0${second}` ;
-    }, 1000)
-}else {
-    setInterval(() =>{
-        secunds.textContent = second;
-    }, 1000)
-    
-}
+setInterval(() =>{
+    if(second < 10){
+            secunds.textContent = `0${second}` ;
+    }else {
+            secunds.textContent = second;    
+    } 
+}, 1000)
+
 
 
 
@@ -42,8 +40,8 @@ form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
     const todos = input.value 
-    localStorage.setItem('list', JSON.stringify(todos))
-    const getItem = localStorage.getItem('list')
+    localStorage.setItem('', JSON.stringify(todos))
+    const getItem = JSON.parse(localStorage.getItem('list'))
     console.log(getItem);
     if(todos){
 

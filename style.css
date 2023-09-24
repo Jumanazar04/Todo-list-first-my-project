@@ -46,12 +46,18 @@
     color: white;
 }
 
-.time {
+.time, .time-two {
     width: 400px;
     text-align: center;
     margin: 30px auto;
 }
 
 .time-o {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.time-b {
     font-size: 30px;
+    font-weight: 500;
 }
