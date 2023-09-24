@@ -12,7 +12,7 @@ const now = new Date();
 const hour = now.getHours();
 const minute = now.getMinutes();
 const second = now.getSeconds();
-console.log(hour);
+
 
 
 if(hour < 10){
@@ -40,20 +40,17 @@ form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
     const todos = input.value 
-    localStorage.setItem('', JSON.stringify(todos))
-    const getItem = JSON.parse(localStorage.getItem('list'))
-    console.log(getItem);
+    localStorage.setItem('list', JSON.stringify(todos))
+    
     if(todos){
-
-       
-
+       const getItem = JSON.parse(localStorage.getItem('list'));
        const item = document.createElement('div');
        item.classList.add('item')
        
        const text = document.createElement('p')
        text.classList.add('item-text');
        item.appendChild(text);
-       text.textContent = input.value;
+       text.textContent = getItem;
 
        const itemChild = document.createElement('div')
        itemChild.classList.add('item-child')
@@ -72,17 +69,13 @@ form.addEventListener('submit', (e)=> {
        deleteBtn.textContent = 'Delete'
 
        result.appendChild(item)
-
        form.reset()
-    }else{
-        span.classList.remove('hidden');
-        setTimeout(()=>{
+        }else{
+            span.classList.remove('hidden');
+            setTimeout(()=>{
             span.classList.add('hidden');
         }, 2500)
-        
     }
-    
-    
 })
 
 
