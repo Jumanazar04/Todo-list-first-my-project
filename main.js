@@ -42,11 +42,12 @@ form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
     const todos = input.value 
-    // localStorage.setItem('list', JSON.stringify(todos))
-
+    localStorage.setItem('list', JSON.stringify(todos))
+    const getItem = localStorage.getItem('list')
+    console.log(getItem);
     if(todos){
 
-       localStorage.setItem('list', JSON.stringify(todos))
+       
 
        const item = document.createElement('div');
        item.classList.add('item')
